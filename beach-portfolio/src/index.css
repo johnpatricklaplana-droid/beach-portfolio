@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* ---- Palette (from brief) ---- */
+  --color-ocean-deep: #0f4c81;
+  --color-cyan: #38bdf8;
+  --color-sand: #f4e1c1;
+  --color-sunset: #fb923c;
+  --color-coral: #ff7f50;
+  --color-white: #ffffff;
+
+  /* tonal extensions, derived from the palette above */
+  --color-ocean-950: #071f33;
+  --color-ocean-900: #0a2f4f;
+  --color-ocean-800: #0f4c81;
+  --color-ocean-700: #16619e;
+  --color-sand-50: #fffaf1;
+  --color-sand-100: #f4e1c1;
+  --color-sand-200: #e9cfa4;
+
+  --font-display: "Outfit", "Plus Jakarta Sans", sans-serif;
+  --font-body: "Plus Jakarta Sans", "Outfit", sans-serif;
+
+  --shadow-glass: 0 8px 32px rgba(15, 76, 129, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-ocean-950);
+  color: var(--color-sand-50);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-coral);
+  color: var(--color-ocean-950);
+}
+
+.glass {
+  background: rgba(7, 31, 51, 0.55);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.glass-warm {
+  background: rgba(244, 225, 193, 0.08);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(244, 225, 193, 0.18);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ocean-950);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-cyan), var(--color-ocean-700));
+  border-radius: 999px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
