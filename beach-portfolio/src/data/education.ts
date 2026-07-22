@@ -2,8 +2,16 @@ import type { EducationEntry } from '../types'
 
 export const education: EducationEntry[] = [
   {
-    id: 'capstone',
-    school: 'Capstone Project — Apex / Daddy\u2019s Home',
+    id: 'self-directed',
+    school: 'Self-Directed Study',
+    degree: 'Data Structures & Algorithms, SQL Databases, APIs & Frontend Development',
+    period: '2025 - Second Year BSIT student',
+    description:
+      'Self-studied data structures and algorithms, relational database design, REST API development, and frontend fundamentals — foundation work that fed directly into full-stack development.',
+  },
+  {
+    id: "daddy's Home",
+    school: 'Personal Project — Daddy\u2019s Home',
     degree: 'Full-Stack SaaS Booking Platform',
     period: '2025 — Present',
     description:
@@ -16,18 +24,10 @@ export const education: EducationEntry[] = [
   },
   {
     id: 'coursework',
-    school: 'BS Computer Science / Information Technology',
+    school: 'BIST (Bachelor in Information Systems Technology)',
     degree: 'Undergraduate coursework',
-    period: '2023 — 2027',
+    period: '2024 — 2028',
     description:
-      'Core coursework in data structures, databases, and software engineering, applied directly to production-style capstone work.',
-  },
-  {
-    id: 'self-directed',
-    school: 'Self-Directed Study',
-    degree: 'Game Development & Systems Programming',
-    period: 'Ongoing',
-    description:
-      'Exploring Unity and LibGDX for interactive 3D work alongside full-stack development.',
+      'Coursework spanning computer systems, databases, networking, and software engineering — with a personal focus on web development.',
   },
 ]
