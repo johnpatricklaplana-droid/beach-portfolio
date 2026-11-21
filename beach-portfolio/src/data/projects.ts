@@ -7,61 +7,34 @@ import type { Project } from '../types'
  */
 export const projects: Project[] = [
   {
-    id: 'apex-booking-platform',
-    title: "Daddy's Home — Multi-Tenant Booking Platform",
+    id: 'jprecall',
+    title: 'JPRecall',
     description:
-      'A full-stack SaaS platform for service businesses to manage staff, availability, and customer bookings across multiple tenants.',
+      'A study review application for scheduling topics, completing daily reviews, and preserving knowledge in long-term memory.',
     longDescription:
-      "Daddy's Home lets service businesses onboard, set up staff schedules, and take bookings through their own branded site — customers can book a real available slot in seconds, with no double-booked appointments and no back-and-forth over timezones.",
-    technologies: ['Java', 'Spring Boot', 'React', 'TypeScript', 'Tailwind', 'PostgreSQL'],
-    image: 'https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=1200&q=80',
-    github: 'https://github.com/johnpatricklaplana-droid/Booking_System_real_one',
-    liveDemo: 'https://booking-system-real-one.vercel.app',
-    category: ['Full Stack', 'Java', 'Spring Boot', 'React', 'PostgreSQL'],
+      'JPRecall gives learners one place to log study topics, choose a 1-day, 3-day, 1-week, or custom review date, work through an organized daily schedule, and move completed topics into long-term memory.',
+    technologies: ['React 19', 'React Router 7', 'TypeScript', 'Vite', 'Tailwind CSS 4', 'Supabase'],
+    image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1200&q=80',
+    github: 'https://github.com/johnpatricklaplana-droid/JPRecall',
+    liveDemo: 'https://jp-recall.vercel.app/',
+    category: ['Full Stack', 'React', 'TypeScript', 'Tailwind', 'PostgreSQL'],
     featured: true,
     year: 2026,
     architecture:
-      'Spring Boot 4 REST API with Hibernate 7.2 / PostgreSQL, JWT auth via HttpOnly cookies, React + Vite SPA frontend, Supabase Storage for media.',
+      'React and React Router protected routes in the browser, authenticated through Supabase Auth and persisted in a Postgres public.to_review table through the Supabase Data API.',
     featuresList: [
-      'Multi-tenant business onboarding wizard',
-      'Timezone-aware availability & booking engine',
-      'Postgres exclusion constraints preventing double-booking',
-      'Analytics dashboard: revenue, peak hours, service distribution',
-      'Role-based access with Spring Security guards',
+      'Log topics with 1-day, 3-day, 1-week, or custom review dates',
+      'Review schedule grouped into Today, Overdue, and Upcoming',
+      'Mark active topics as reviewed or delete them',
+      'Search reviewed topics and track this-month and storage counts',
+      'Return topics to the active schedule without creating duplicates',
+      'Email/password and Google OAuth authentication',
     ],
     challenges:
-      'Keeping availability logic consistent between the frontend preview and backend source of truth, and enforcing overlap prevention at the database level instead of the application layer.',
+      'Keeping active and completed topic states consistent across the schedule and memory library while preserving a simple date-based workflow.',
     lessonsLearned:
-      'Entity graphs and exclusion constraints solve entire classes of bugs that application code would otherwise have to guard against manually.',
+      'Using one review-state column as the source of truth made transitions between review and long-term memory clear and predictable.',
     size: 'wide',
-  },
-  {
-    id: 'heydaddy-messaging',
-    title: 'HeyDaddy — Realtime Messaging App',
-    description:
-      'A React Native chat app with realtime messaging, media sharing, and push notifications.',
-    longDescription:
-      "A mobile-first messaging app built with Expo and Supabase, with realtime channel subscriptions and push notifications delivered through Expo/FCM.",
-    technologies: ['React', 'TypeScript', 'PostgreSQL'],
-    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80',
-    github: 'https://github.com/johnpatricklaplana-droid/messaging-app-upgraded-one',
-    liveDemo: 'https://project-cauxt.vercel.app',
-    category: ['Frontend', 'React', 'TypeScript', 'PostgreSQL'],
-    featured: true,
-    year: 2025,
-    architecture:
-      "Expo + React Native client, Supabase Postgres with RLS policies, RealtimeContext for channel management.",
-    featuresList: [
-      'Realtime message delivery via Supabase channels',
-      'Push notifications via Expo/FCM',
-      'Google OAuth sign-in',
-      'Light and dark mode support',
-    ],
-    challenges:
-      'Managing subscription lifecycles across screens without leaking realtime channels or duplicating listeners.',
-    lessonsLearned:
-      'Centralizing realtime state in a single context made the rest of the app far easier to reason about.',
-    size: 'md',
   },
   // {
   //   id: 'booking-analytics-dashboard',
